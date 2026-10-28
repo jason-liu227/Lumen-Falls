@@ -19,7 +19,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 66.854}
+        value: {x: 0, y: 0, z: 66.845}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -28,9 +28,9 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.1
-        value: {x: 0, y: 0, z: 49.542}
-        inSlope: {x: 0, y: 0, z: -334.27}
-        outSlope: {x: 0, y: 0, z: -334.27}
+        value: {x: 0, y: 0, z: 42.303}
+        inSlope: {x: 0, y: 0, z: -334.225}
+        outSlope: {x: 0, y: 0, z: -334.225}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -55,7 +55,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.4
-        value: {x: 0, y: 0, z: 66.854}
+        value: {x: 0, y: 0, z: 66.845}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -65,14 +65,14 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: WeaponPivot
+    path: 
   m_PositionCurves:
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0.528, y: 0.854, z: 0}
+        value: {x: 0.4742775, y: 0.798, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -81,25 +81,16 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.1
-        value: {x: 0.497, y: 0.738, z: 0}
-        inSlope: {x: -0.61999977, y: -1.4849999, z: 0}
-        outSlope: {x: -0.61999977, y: -1.4849999, z: 0}
+        value: {x: 0.386, y: 0.645, z: 0}
+        inSlope: {x: -1.6963874, y: -1.0949999, z: 0}
+        outSlope: {x: -1.6963874, y: -1.0949999, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.2
-        value: {x: 0.181, y: 0.557, z: 0}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 0.3
-        value: {x: 0.181, y: 0.557, z: 0}
+        value: {x: 0.135, y: 0.579, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -108,7 +99,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.4
-        value: {x: 0.528, y: 0.854, z: 0}
+        value: {x: 0.4742775, y: 0.798, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -118,7 +109,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: WeaponPivot
+    path: 
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
@@ -130,7 +121,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1053311427
+      path: 0
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -140,7 +131,7 @@ AnimationClip:
       isSerializeReferenceCurve: 0
       metaData: 0
     - serializedVersion: 2
-      path: 1053311427
+      path: 0
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -224,7 +215,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: WeaponPivot
+    path: 
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -281,7 +272,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: WeaponPivot
+    path: 
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -291,7 +282,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 66.854
+        value: 66.845
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -300,9 +291,9 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.1
-        value: 49.542
-        inSlope: -334.27
-        outSlope: -334.27
+        value: 42.303
+        inSlope: -334.225
+        outSlope: -334.225
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -327,7 +318,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.4
-        value: 66.854
+        value: 66.845
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -338,7 +329,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: WeaponPivot
+    path: 
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -348,7 +339,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.528
+        value: 0.4742775
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -357,25 +348,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.1
-        value: 0.497
-        inSlope: -0.61999977
-        outSlope: -0.61999977
+        value: 0.386
+        inSlope: -1.6963874
+        outSlope: -1.6963874
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.2
-        value: 0.181
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.3
-        value: 0.181
+        value: 0.135
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -384,7 +366,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.4
-        value: 0.528
+        value: 0.4742775
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -395,7 +377,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: WeaponPivot
+    path: 
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -405,7 +387,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.854
+        value: 0.798
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -414,25 +396,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.1
-        value: 0.738
-        inSlope: -1.4849999
-        outSlope: -1.4849999
+        value: 0.645
+        inSlope: -1.0949999
+        outSlope: -1.0949999
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.2
-        value: 0.557
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.3
-        value: 0.557
+        value: 0.579
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -441,7 +414,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.4
-        value: 0.854
+        value: 0.798
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -452,7 +425,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: WeaponPivot
+    path: 
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -480,15 +453,6 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.2
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.3
         value: 0
         inSlope: 0
         outSlope: 0
@@ -509,7 +473,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: WeaponPivot
+    path: 
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -522,7 +486,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: WeaponPivot
+    path: 
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -534,7 +498,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: WeaponPivot
+    path: 
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -546,10 +510,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: WeaponPivot
+    path: 
     classID: 4
     script: {fileID: 0}
     flags: 0
-  m_HasGenericRootTransform: 0
+  m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events: []
