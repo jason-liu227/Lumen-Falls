@@ -240,8 +240,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1396697727}
-  - component: {fileID: 1396697729}
-  - component: {fileID: 1396697728}
   m_Layer: 0
   m_Name: WeaponPivot
   m_TagString: Untagged
@@ -265,45 +263,6 @@ Transform:
   - {fileID: 1535819254}
   m_Father: {fileID: 1870831518}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &1396697728
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396697726}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 7400000, guid: e6199019d1db16a4b9f506c98c4aee04, type: 2}
-  m_Animations:
-  - {fileID: 0}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_UpdateMode: 0
-  m_CullingType: 0
---- !u!95 &1396697729
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396697726}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 775fbb911e986a9489e2d2ca79731a35, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1535819253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -436,6 +395,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WeaponDamage
   damage: 10
   swordCollider: {fileID: 0}
+--- !u!212 &1535819258 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3626916397498700004, guid: c5eef3bbbd7ada443add31066014a5c1, type: 3}
+  m_PrefabInstance: {fileID: 1535819253}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1546150117
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,6 +618,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: d2fee6ff1df42ad42b838c2072004fbd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1870831520}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: d2fee6ff1df42ad42b838c2072004fbd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1870831522}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: d2fee6ff1df42ad42b838c2072004fbd, type: 3}
 --- !u!1 &1870831513 stripped
 GameObject:
@@ -694,8 +661,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.10165405, y: 1.0117188}
-  m_Size: {x: 0.65582085, y: 1.9765625}
+  m_Offset: {x: -0.10165405, y: 1.0245693}
+  m_Size: {x: 0.65582085, y: 1.9508615}
   m_Direction: 0
 --- !u!50 &1870831515
 Rigidbody2D:
@@ -747,6 +714,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   moveSpeed: 5
+  maxHealth: 100
+  swordRenderer: {fileID: 1535819258}
 --- !u!114 &1870831520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -759,10 +728,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464fb8e17c80929468b6b88fa1ae679f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWeaponAttack
-  swordAnimator: {fileID: 1396697729}
+  playerAnimator: {fileID: 1870831521}
   swordDamage: {fileID: 1535819257}
   swordPivot: {fileID: 1396697727}
   playerSprite: {fileID: 1870831517}
+  swordRenderer: {fileID: 0}
+  attackDuration: 0.4
+--- !u!95 &1870831521 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1160356261127867848, guid: d2fee6ff1df42ad42b838c2072004fbd, type: 3}
+  m_PrefabInstance: {fileID: 1870831512}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1870831522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870831513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 464fb8e17c80929468b6b88fa1ae679f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerWeaponAttack
+  playerAnimator: {fileID: 1870831521}
+  swordDamage: {fileID: 1535819257}
+  swordPivot: {fileID: 1396697727}
+  playerSprite: {fileID: 1870831517}
+  swordRenderer: {fileID: 1535819258}
   attackDuration: 0.4
 --- !u!1001 &1921845081
 PrefabInstance:
@@ -778,11 +771,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 518ddb5aecb9220419eebe0fd57ab61f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.41
+      value: 4.42
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 518ddb5aecb9220419eebe0fd57ab61f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.47
+      value: -2.65
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 518ddb5aecb9220419eebe0fd57ab61f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -872,7 +865,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.03596592, y: 0.85437936}
+  m_Offset: {x: 0.04597354, y: 1.126581}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.42105263, y: -1.0666667}
@@ -882,7 +875,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.0301294, y: 0.7087587}
+  m_Size: {x: 0.6178241, y: 1.2531619}
   m_EdgeRadius: 0
 --- !u!50 &1921845087
 Rigidbody2D:
@@ -924,7 +917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   moveSpeed: 1
-  stoppingDistance: 1
+  stoppingDistance: 0
   detectionRadius: 5
   player: {fileID: 1870831518}
   facesLeftByDefault: 1
