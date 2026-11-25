@@ -17,9 +17,20 @@ public class PlayerWeaponAttack : MonoBehaviour
 
     private bool isAttacking;
 
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+        isAttacking = false;
+        ResetWeapon();
+    }
+
     private void Start()
     {
-        // Hide sword when not attacking
+        ResetWeapon();
+    }
+
+    private void ResetWeapon()
+    {
         if (swordRenderer != null)
             swordRenderer.enabled = false;
 
@@ -41,10 +52,9 @@ public class PlayerWeaponAttack : MonoBehaviour
             swordPivot.localScale = scale;
         }
 
-        // Left mouse button attacks
-        if (Mouse.current != null &&
-            Mouse.current.leftButton.wasPressedThisFrame &&
-            !isAttacking)
+        bool attackPressed = Mouse.current?.leftButton.wasPressedThisFrame == true ||
+                             Keyboard.current?.jKey.wasPressedThisFrame == true;
+        if (attackPressed && !isAttacking)
         {
             StartCoroutine(Attack());
         }
