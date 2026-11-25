@@ -12,8 +12,7 @@ public class PlayerWeaponAttack : MonoBehaviour
     [SerializeField] private SpriteRenderer playerSprite;
     [SerializeField] private SpriteRenderer swordRenderer;
 
-    [Header("Attack Settings")]
-    [SerializeField] private float attackDuration = 0.4f;
+    private static readonly int AttackState = Animator.StringToHash("Base Layer.Attack");
 
     private bool isAttacking;
 
@@ -60,37 +59,32 @@ public class PlayerWeaponAttack : MonoBehaviour
         }
     }
 
+    // Called by the Attack clip when the blade reaches full extension.
+    public void BeginStabDamage()
+    {
+        if (isActiveAndEnabled && isAttacking)
+            swordDamage.StartDamage();
+    }
+
     private IEnumerator Attack()
     {
         isAttacking = true;
-
-        // Show sword
-        if (swordRenderer != null)
-            swordRenderer.enabled = true;
-
-        // Trigger player attack animation
         playerAnimator.SetTrigger("Attack");
 
-        // Wind-up
-        yield return new WaitForSeconds(0.1f);
+        // Wait for the Animator to evaluate the trigger.
+        yield return null;
 
-        // Enable damage during swing
-        swordDamage.StartDamage();
+        if (playerAnimator.GetCurrentAnimatorStateInfo(0).fullPathHash == AttackState)
+        {
+            swordRenderer.enabled = true;
+            do
+            {
+                yield return null;
+            }
+            while (playerAnimator.GetCurrentAnimatorStateInfo(0).fullPathHash == AttackState);
+        }
 
-        yield return new WaitForSeconds(0.15f);
-
-        // Disable damage after swing
-        swordDamage.StopDamage();
-
-        // Recovery
-        yield return new WaitForSeconds(
-            Mathf.Max(0f, attackDuration - 0.25f)
-        );
-
-        // Hide sword after attack
-        if (swordRenderer != null)
-            swordRenderer.enabled = false;
-
+        ResetWeapon();
         isAttacking = false;
     }
 }
