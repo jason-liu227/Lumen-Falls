@@ -6,11 +6,15 @@ public class WeaponDamage : MonoBehaviour
     [SerializeField] private int damage = 10;
     [SerializeField] private Collider2D swordCollider;
 
+    private Transform wielder;
     private bool canDamage = false;
     private HashSet<EnemyHealth> hitEnemies = new HashSet<EnemyHealth>();
 
     private void Awake()
     {
+        PlayerMovement player = GetComponentInParent<PlayerMovement>();
+        wielder = player != null ? player.transform : transform;
+
         if (swordCollider == null)
             swordCollider = GetComponent<Collider2D>();
     }
@@ -45,7 +49,7 @@ public class WeaponDamage : MonoBehaviour
 
         if (enemy != null && hitEnemies.Add(enemy))
         {
-            enemy.TakeDamage(damage);
+            enemy.TakeDamage(damage, (Vector2)wielder.position);
         }
     }
 }

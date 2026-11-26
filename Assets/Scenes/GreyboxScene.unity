@@ -780,6 +780,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: 518ddb5aecb9220419eebe0fd57ab61f, type: 3}
+      propertyPath: m_Controller
+      value:
+      objectReference: {fileID: 9100000, guid: dad8df3bccc98a90cabbfbb766775824, type: 2}
     - target: {fileID: 7878350319992209165, guid: 518ddb5aecb9220419eebe0fd57ab61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.42
@@ -932,6 +936,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   moveSpeed: 1
   stoppingDistance: 0
+  hopController: {fileID: 9100000, guid: dad8df3bccc98a90cabbfbb766775824, type: 2}
+  hopFloor: {fileID: 1546150118}
   detectionRadius: 5
   player: {fileID: 1870831518}
   facesLeftByDefault: 1

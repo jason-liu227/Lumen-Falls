@@ -18,10 +18,16 @@ public class EnemyHealth : MonoBehaviour
         IsDead = false;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, Vector2? hitOrigin = null)
     {
-        if (IsDead)
+        if (IsDead || damage <= 0)
             return;
+
+        if (TryGetComponent(out EnemyAttack attack))
+            attack.CancelPendingHit();
+
+        if (hitOrigin.HasValue && TryGetComponent(out EnemyMovement movement))
+            movement.ApplyKnockback(hitOrigin.Value);
 
         currentHealth -= damage;
 
